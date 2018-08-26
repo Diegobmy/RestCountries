@@ -21,6 +21,7 @@ public class CountriesSwipeCallback extends ItemTouchHelper.SimpleCallback {
 
     //controls if the view is locked beyond the anchor
     private boolean lockButton;
+    private final int deleteButtonAnchor = 300;
 
     public CountriesSwipeCallback(Context context, CountriesListAdapter countriesListAdapter) {
         super(0, ItemTouchHelper.LEFT);
@@ -52,7 +53,7 @@ public class CountriesSwipeCallback extends ItemTouchHelper.SimpleCallback {
 
             // if the view is locked make its minimal x position be -300
             if (lockButton) {
-                dX = Math.min(dX, -300);
+                dX = Math.min(dX, -deleteButtonAnchor);
             }
 
             // if the item is dragged to the left, draw the delete button
@@ -100,7 +101,7 @@ public class CountriesSwipeCallback extends ItemTouchHelper.SimpleCallback {
                     countriesListAdapter.notifyItemChanged(position);
                 }
                 // if the x position is beyond the anchor, sets lockButton as true
-                if (Math.abs(dX) > 300) {
+                if (Math.abs(dX) > deleteButtonAnchor) {
                     lockButton = true;
                 }
             }
@@ -110,6 +111,6 @@ public class CountriesSwipeCallback extends ItemTouchHelper.SimpleCallback {
 
     private boolean touchIsOnDelete(View itemView, View v, MotionEvent event) {
         // returns true if the touch event was inside the delete button
-        return event.getX() >= v.getWidth() - 300 && event.getY() > itemView.getTop() && event.getY() < itemView.getBottom();
+        return event.getX() >= v.getWidth() - deleteButtonAnchor && event.getY() > itemView.getTop() && event.getY() < itemView.getBottom();
     }
 }
