@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="country_adapter_item_common_margin">15dp</dimen>
+    <dimen name="label_margin">4dp</dimen>
+    <dimen name="country_name_text">24sp</dimen>
+    <dimen name="country_info_text">18sp</dimen>
+</resources>

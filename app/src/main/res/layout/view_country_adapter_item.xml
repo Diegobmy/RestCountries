@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@android:color/white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv_country_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/country_adapter_item_common_margin"
+        android:layout_marginStart="@dimen/country_adapter_item_common_margin"
+        android:textSize="@dimen/country_name_text"
+        android:textStyle="bold"
+        tools:text="Brazil"
+        android:textColor="@android:color/black"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_country_language_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/country_adapter_item_common_margin"
+        android:text="@string/language"
+        android:textSize="@dimen/country_info_text"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_country_name" />
+
+    <TextView
+        android:id="@+id/tv_country_language"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/label_margin"
+        android:textSize="@dimen/country_info_text"
+        app:layout_constraintLeft_toRightOf="@id/tv_country_language_label"
+        app:layout_constraintTop_toBottomOf="@id/tv_country_name"
+        tools:text="Portuguese" />
+
+    <TextView
+        android:id="@+id/tv_country_currency_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/country_adapter_item_common_margin"
+        android:text="@string/currency"
+        android:textSize="@dimen/country_info_text"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_country_language_label" />
+
+    <TextView
+        android:id="@+id/tv_country_currency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/label_margin"
+        android:textSize="@dimen/country_info_text"
+        app:layout_constraintLeft_toRightOf="@id/tv_country_currency_label"
+        app:layout_constraintTop_toBottomOf="@id/tv_country_language_label"
+        tools:text="Real" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/country_adapter_item_common_margin"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintTop_toBottomOf="@id/tv_country_currency" />
+
+</android.support.constraint.ConstraintLayout>

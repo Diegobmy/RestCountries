@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">RestCountries</string>
+    <string name="currency">Currency:</string>
+    <string name="language">Language:</string>
+    <string name="loading_countries_list">Loading countries list...</string>
+    <string name="try_again">Try again.</string>
+    <string name="countries_list_error">Could not load countries list.</string>
+</resources>
